@@ -7,16 +7,16 @@ import { SideBar } from 'widgets/SideBar/ui'
 import { Suspense } from 'react'
 
 export function App (): JSX.Element {
-  const { theme } = useTheme()
-  return (
-      <div className={classNames('app', {}, [`${theme}`])}>
-        <Suspense fallback="">
-        <Navbar />
-          <div className="content-page">
-            <SideBar />
-            <AppRouter />
-          </div>
-        </Suspense>
-      </div>
-  )
+    const { theme } = useTheme()
+    return (
+        <div className={classNames('app', {}, [`${theme}`])}>
+            <Suspense fallback="">
+                <Navbar />
+                <div className="content-page">
+                    <SideBar />
+                    <AppRouter />
+                </div>
+            </Suspense>
+        </div>
+    )
 }

@@ -1,0 +1,9 @@
+.loader-container {
+    height: calc(100vh - var(--navbar-height));
+    display: flex;
+
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+

@@ -2,11 +2,11 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
+    jest: true
   },
   extends: [
-    'standard-with-typescript',
-    'plugin:react/jsx-runtime'
+    'standard-with-typescript'
   ],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -22,10 +22,13 @@ module.exports = {
   ],
   rules: {
     'plugin:react/recommended': 'off',
-    '@typescript-eslint/prefer-nullish-coalescing': 'off',
-    '@typescript-eslint/strict-boolean-expressions': 'off',
+    '@typescript-eslint/prefer-nullish-coalescing': 'warn',
+    '@typescript-eslint/strict-boolean-expressions': 'warn',
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/consistent-type-imports': 'off'
+    '@typescript-eslint/consistent-type-imports': 'off',
+    '@typescript-eslint/no-floating-promises': 'off',
+    'indent': 'off',
+    '@typescript-eslint/indent': ['error', 4]
   },
   globals: {
     __IS_DEV__: true
